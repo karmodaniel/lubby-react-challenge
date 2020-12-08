@@ -1,15 +1,26 @@
-## Welcome to Bikcraft 👋
+## Welcome to React Challenge 👋
 Lubby challenge.
 
-<img alt="Bikcraft site" src="./react_github/src/assets/img_app.png">
+<img alt="Lubby challenge" src="src/assets/img_app.png">
 
 </br>
 
+## Get started
+You need nodejs installed.
+
+
+Clone the repository https://github.com/karmodaniel/lubby-react-challenge.git
+
+Run npm install or yarn
+
+Run npm start or yarn start
+
+
+
 ## 🚀 Development tools 
 
-- HTML
-- CSS
-- JAVASCRIPT
+- REACT
+- REDUX
 
  ## Author
 
