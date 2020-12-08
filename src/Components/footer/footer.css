@@ -1,0 +1,60 @@
+.footer {
+    height: 75px;
+    background: #ffffff;
+    color: #A5A5A5;
+    position: absolute;
+    width: 960px;
+    bottom: 0px;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+  }
+  
+  @media (max-width: 959px) {
+    .footer {
+      width: 300px;
+    }
+  }
+  
+  .tabs {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 959px) {
+    .tabs {
+       
+      padding-left: 0px;
+    }
+  }
+  
+  .tabs:hover {
+    cursor: pointer;
+  }
+  
+  .tab-icons {
+    height: 23px;
+    width: auto;
+    color: #A5A5A5;
+   
+  }
+
+  .tabs li  {
+    align-self: center;
+  }
+  
+  .active {
+    color: #000000;
+  }
+  
+  
+  .tab-text {
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 5px;
+    
+  } 
