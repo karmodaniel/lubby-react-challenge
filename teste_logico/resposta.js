@@ -6,9 +6,10 @@ function newArray(num, value) {
   for (let i = 0; i < num; i++) {
     array.push(value);
   }
-  return `question 1: ${array}`;
+  return array;
 }
-console.log(newArray(3, 3));
+console.log('question 1:', newArray(3, 3));
+
 
 // 2) Implemente um método que inverta um array, não utilize métodos nativos do array.
 // Entrada do método ([1,2,3,4]), Resultado do método: [4,3,2,1]
@@ -20,11 +21,11 @@ function reorder(data) {
     newArray.push(data[i]);
   }
 
-  return `question 2: ${newArray}`;
+  return newArray;
 }
 
 data = [1, 2, 3, 4];
-console.log(reorder(data));
+console.log('question 2:', reorder(data));
 //3)Implemente um método que limpe os itens desnecessários de um array (false, undefined, strings vazias, zero, null)
 // Entrada do método ([1,2,'', undefined]), Resultado do método: [1,2]
 function validation(value) {
@@ -34,10 +35,11 @@ function validation(value) {
     if (element) result.push(element);
   });
 
-  return `question 3: ${result}`;
+  return result;
 }
 
-console.log(validation([1, 2, "", undefined]));
+console.log('question 3:', validation([1, 2, "", undefined]));
+
 
 // 4) Implemente um método que a partir de um array de arrays, converta em um objeto com chave e valor.
 // Entrada do método ([["c",2],["d",4]]), Resultado do métdodo: {c:2, d:4}
@@ -55,6 +57,7 @@ function keyAndValue(value) {
 }
 console.log(keyAndValue([["c", 2],["d", 4]]));
 
+
 // 5) Implemente um método que retorne um array, sem os itens passados por parâmetro depois do array de entrada. Entrada do método ([5,4,3,2,5], 5,3), Resultado do método: [4,2]
 function changeArray(value1, ...value2) {
   let newArray = [];
@@ -66,10 +69,11 @@ function changeArray(value1, ...value2) {
       }
     }
   }
-  return `question 5: ${newArray}`;
+  return newArray;
 }
 
-console.log(changeArray([5, 4, 3, 2, 5], 5, 3));
+console.log('question 5:', changeArray([5, 4, 3, 2, 5], 5, 3));
+
 
 // 6) Implemente um método que retorne um array, sem valores duplicados.
 // Entrada do método ([1,2,3,3,2,4,5,4,7,3]), Resultado do método: [1,2,3,4,5,7]
@@ -78,10 +82,12 @@ function duplicated(value) {
        return (value.indexOf(element) === index) 
    })
 
-   return `question 6: ${array}`;
+   return array;
 }
 
-console.log(duplicated([1,2,3,3,2,4,5,4,7,3]));
+console.log('question 6:', duplicated([1,2,3,3,2,4,5,4,7,3]));
+
+
 // 7) Implemente um método que compare a igualdade de dois arrays e retorne um valor booleano.
 // Entrada do método ([1,2,3,4],[1,2,3,4]), Resultado do método: true
 function equality(array, array1) {
@@ -96,6 +102,7 @@ function equality(array, array1) {
 
 console.log(equality([1, 2, 3, 4], [1, 2, 3, 4]));
 
+
 // 8) Implemente um método que remova os aninhamentos de um array de arrays para um array unico.
 // Entrada do método ([1, 2, [3], [4, 5]]), Resultado do método: [1, 2, 3, 4, 5]
 function uniqueArray(value) {
@@ -108,13 +115,32 @@ function uniqueArray(value) {
       array.push(parseInt(element));
   })
 
-  return `question 8: ${array}`;
+  return array;
 }
 
-console.log(uniqueArray([1, 2, [3], [4, 5]]))
+console.log('question 8: ',uniqueArray([1, 2, [3], [4, 5]]))
+
 
 // 9) Implemente um método divida um array por uma quantidade passada por parâmetro.
 // Entrada do método ([1, 2, 3, 4, 5], 2), Resultado do método: [[1, 2], [3, 4], [5]]
+function slice(value1, value2) {
+  let array = [];
+  const array2 = [];
+  let cont = 1;
+
+  value1.forEach((element, index, self) => {
+     array.push(element);
+    if (cont === value2 || index == self.length -1) {
+      array2.push(array);
+      array = [];
+      cont = 0;
+    }
+    cont++;
+    
+  })
+  return array2;
+}
+console.log('question 9: ', slice([1, 2, 3, 4, 5], 2))
 
 
 // 10) Implemente um método que encontre os valores comuns entre dois arrays.
@@ -123,7 +149,7 @@ function reapete (array, array1) {
   newArray = array.filter((element) => {
       return array1.indexOf(element) !== -1
   })
-  return `question 10: ${newArray}`;
+  return newArray;
 }
-console.log(reapete([6, 8], [8, 9]));
+console.log('question 10:', reapete([6, 8], [8, 9]));
 // ps: Esses exercícios são de senso comum da comunidade desenvolvimento, utilize o melhor padrão para implementação, criando uma semântica factível.
